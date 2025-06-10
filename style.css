@@ -1,3 +1,44 @@
+/* Animations */
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body {
     font-family: 'Courier New', monospace;
     background-color: #121212;
@@ -6,9 +47,42 @@ body {
     padding: 0;
 }
 
+#Intro {
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeSlideDown 1s ease-out forwards;
+}
+
+#Intro h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeSlideDown 1s ease-out forwards;
+}
+
+#Intro h2 {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: 20px auto;
+    animation: fadeSlideRight 1.2s ease-out forwards;
+}
+
 #Intro img {
     width: 200px;
     max-width: 100%;
     border-radius: 10px;
     margin-top: 20px;
+    animation: fadeSlideLeft 1.2s ease-out forwards;
+}
+
+/* Delay img so it appears slightly after h1 */
+#Intro img {
+    animation-delay: 0.5s;
+}
+
+#Background {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 20px;
+    animation: fadeSlideUp 1.5s ease-out forwards;
+    text-align: center;
 }
