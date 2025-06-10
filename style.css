@@ -151,6 +151,9 @@ body {
 .skills-header {
     text-align: left;
     animation: fadeSlideLeft 1s ease-out forwards;
+    margin: 0;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .skill-items {
