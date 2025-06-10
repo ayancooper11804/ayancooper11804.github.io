@@ -11,6 +11,7 @@ const observer = new IntersectionObserver(entries => {
                 const skills = entry.target.querySelectorAll('.skill');
                 skills.forEach((skill, index) => {
                     skill.style.setProperty('--delay', `${index * 0.1}s`);
+                    skill.classList.add('visible');
                 })
             }
         }
