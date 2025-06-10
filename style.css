@@ -47,10 +47,32 @@ body {
     padding: 0;
 }
 
+.intro-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Update animations so they only slide in horizontally */
+.intro-content img {
+    width: 200px;
+    max-width: 100%;
+    border-radius: 10px;
+    animation: fadeSlideLeft 1.2s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.intro-content h2 {
+    font-size: 1.25rem;
+    max-width: 600px;
+    animation: fadeSlideRight 1.2s ease-out forwards;
+}
+
 #Intro {
     text-align: center;
     padding: 60px 20px;
-    animation: fadeSlideDown 1s ease-out forwards;
 }
 
 #Intro h1 {
@@ -82,7 +104,13 @@ body {
 #Background {
     max-width: 700px;
     margin: 80px auto;
-    padding: 20px;
-    animation: fadeSlideUp 1.5s ease-out forwards;
     text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#Background.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
